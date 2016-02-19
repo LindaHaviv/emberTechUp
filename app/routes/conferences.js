@@ -2,6 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.topic.findAll('conference');
+    return this.store.findAll('conference');
   }
 });
