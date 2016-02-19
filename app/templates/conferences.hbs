@@ -1,0 +1,13 @@
+
+<ul>
+  {{#each model as |conference|}}
+    <li>
+      <strong>{{conference.title}}</strong><br><br>
+      <em>by</em>
+      {{conference.user.name}}
+    </li>
+  {{/each}}
+</ul>
+
+
+{{outlet}}
