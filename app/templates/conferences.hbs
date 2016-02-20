@@ -1,11 +1,15 @@
-
+<h1>Conference Page</h1>
 <ul>
   {{#each model as |conference|}}
+
     <li>
-      <strong>{{conference.title}}</strong><br><br>
-      <em>by</em>
-      {{conference.user.name}}
-    </li>
+      <strong>Title:</strong> {{conference.title}}
+          </li><br>
+          <li> <strong>Location:</strong> 
+      {{conference.location}}
+      </li><br>
+  <li><strong>Date:</strong> {{conference.date}}</li><br>
+
   {{/each}}
 </ul>
 
