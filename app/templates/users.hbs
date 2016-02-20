@@ -1,1 +1,13 @@
+<ul>
+  {{#each model as |user|}}
+    <li>
+      <strong> Username:</strong> {{user.username}}<br><br>
+      <strong>Name:</strong> {{user.name}}<br><br>
+      <strong>Email:</strong> {{user.email}}<br><br>
+ 
+    </li>
+  {{/each}}
+</ul>
+
+
 {{outlet}}
