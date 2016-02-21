@@ -6,16 +6,17 @@ const Router = Ember.Router.extend({
 });
 
  Router.map(function() {
- this.route('conferences', function() {
-    this.route('conference', { path: ':conference_id' });
-  });
-  this.route('topics', function() {
-    this.route('topic', { path: ':topic_id' });
-  });
-  this.route('users', function() {
-    this.route('user', { path: ':user_id' });
-  });  
+   this.route('conferences', function() {
+      this.route('conference', { path: ':conference_id' });
+    });
+   this.route('topics', function() {
+     this.route('topic', { path: ':topic_id' });
    });
+   this.route('users', function() {
+     this.route('user', { path: ':user_id' });
+   });
+   this.route('login');
+ });
         
 
 export default Router;

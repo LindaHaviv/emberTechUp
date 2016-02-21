@@ -7,6 +7,7 @@ module.exports = function(environment) {
     baseURL: '/',
     locationType: 'auto',
     contentSecurityPolicy: {
+      // 'connect-src': "*",
       'connect-src': "'self' http://localhost:3000",
       'img-src': "'self' *",
       'font-src': "'self' fonts.gstatic.com",
@@ -25,6 +26,7 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
