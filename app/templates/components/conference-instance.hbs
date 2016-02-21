@@ -1,0 +1,40 @@
+ {{#if isExpanded}}
+
+ <h2><strong>{{conference.title}}</strong><em>by</em></h2>
+
+<ul>
+      <li>{{conference.id}}</li>
+      <li>{{conference.creator.name}}</li>
+      <li>{{conference.creator.username}}</li>
+      <li>{{conference.creator.email}}</li>
+
+      <li>
+
+          <ul>
+            {{#each conference.attendees as |attendee|}}
+
+               <li>{{attendee.name}}</li>
+
+            {{/each}}
+          </ul>
+
+      </li>
+</ul>
+{{else}}
+
+{{! The context here is the controller}}
+<h2>Total conferences: {{model.length}}</h2>
+
+<ul>
+{{#each model as |conference|}}
+
+  <li>{{conference.title}}</li>
+{{/each}}
+</ul>
+
+
+
+ {{/if}}
+
+
+{{yield}}

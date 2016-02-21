@@ -4,7 +4,7 @@ export default DS.Model.extend({
   username: DS.attr('string'),
   name: DS.attr('string'),
   email: DS.attr('string'),
-  conferences: DS.hasMany('conference') 
+  conferences: DS.hasMany('conference', {async: true}) 
 });
 
 

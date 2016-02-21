@@ -1,11 +1,11 @@
 
 <ul>
   {{#each model as |conference|}}
+
     <li>
-      <strong>{{conference.title}}</strong><br><br>
-      <em>by</em>
-      {{conference.user.name}}
-    </li>
+    {{ conference-instance conference = conference isExpanded = true}}
+     </li>
+
   {{/each}}
 </ul>
 
