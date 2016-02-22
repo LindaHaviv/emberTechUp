@@ -20,19 +20,22 @@ const Router = Ember.Router.extend({
         
 
  Router.map(function() {
-
    this.route('conferences', function() {
      this.route('new');
      this.route('edit');
+     this.route('details', {path: ':id'});
    });
    this.route('topics', function() {
      this.route('new');
      this.route('edit');
+     this.route('details', {path: ':id'});
    });
    this.route('users', function() {
      this.route('new');
      this.route('edit');
+     this.route('details', {path: ':id'});
    });
+
  });
 
 export default Router;
