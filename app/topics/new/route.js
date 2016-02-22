@@ -8,12 +8,13 @@ export default Ember.Route.extend({
 
   },
   actions: {
-    save: function(model){
-      var router = this;
-      model.save().then(function(){
-        router.transitionTo('topics.details', model);
-
+    save: function(){
+      // var router = this;
+      var topic = this.modelFor(this.routeName);
+      topic.save().then((topic)=>{
+        this.transitionTo('topics.details', topic);
       });
+
 
     }
   }

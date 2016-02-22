@@ -10,11 +10,11 @@ export default Ember.Route.extend({
   actions: {
     save: function(){
       // var router = this;
-      var conference = this.modelFor(this.routeName)
+      var conference = this.modelFor(this.routeName);
       conference.save().then((conference)=>{
-        this.transitionTo('conferences.details', conference)
+        this.transitionTo('conferences.details', conference);
       });
-     
+
 
     }
   }
