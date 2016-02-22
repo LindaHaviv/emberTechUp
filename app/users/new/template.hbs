@@ -1,0 +1,16 @@
+<h1>New User!</h1>
+
+<div>Name: {{input value=model.name}}</div>
+
+<div>Username: {{input value=model.username }}</div>
+
+<div>Email: {{input value=model.email }}</div>
+
+<div>
+  <button{{action 'save' model}}>Create</button>
+
+</div>
+
+
+
+{{outlet}}
