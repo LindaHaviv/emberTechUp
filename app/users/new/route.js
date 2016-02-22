@@ -9,8 +9,9 @@ export default Ember.Route.extend({
   },
   actions: {
     save: function(model){
+      var router = this;
       model.save().then(function(){
-        console.log('Model Saved');
+        router.transitionTo('users.details', model);
 
       });
 
