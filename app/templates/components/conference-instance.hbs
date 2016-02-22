@@ -2,23 +2,26 @@
 
  <h2><strong>{{conference.title}}</strong><em>by</em></h2>
 
+
 <ul>
       <li>{{conference.id}}</li>
       <li>{{conference.creator.name}}</li>
       <li>{{conference.creator.username}}</li>
       <li>{{conference.creator.email}}</li>
 
-      <li>
+{{!--       <li>
 
           <ul>
             {{#each conference.attendees as |attendee|}}
 
                <li>{{attendee.name}}</li>
+               <li>{{attendee.username}}</li>
+               <li>{{attendee.email}}</li>
 
             {{/each}}
           </ul>
 
-      </li>
+      </li> --}}
 </ul>
 {{else}}
 
