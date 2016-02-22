@@ -1,0 +1,11 @@
+<h1>Welcome to tech up</h1>
+
+<h3>ALL CONFERENCES</h3>
+
+<ul>
+  {{#each model as |conference|}}
+  <li>{{conference.title}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}
