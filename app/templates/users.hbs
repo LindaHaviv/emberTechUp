@@ -1,13 +1,61 @@
-<ul>
-  {{#each model as |user|}}
-    <li>
-      <strong> Username:</strong> {{user.username}}<br><br>
-      <strong>Name:</strong> {{user.name}}<br><br>
-      <strong>Email:</strong> {{user.email}}<br><br>
- 
-    </li>
-  {{/each}}
-</ul>
+<div class="container">
 
+  <div class="row">
+    <div class="col-xs-12">
+    <h2 class="center">Users</h2>
+      <div class="table-responsive">
+        <table summary="This table displays conference'ss according topic" class="table table-bordered table-hover">
+          <caption class="text-center"></caption>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+       <div class="container">
 
-{{outlet}}
+  <div class="row">
+    <div class="col-xs-12">
+    <h2 class="center">Conferences</h2>
+      <div class="table-responsive">
+        <table summary="This table displays conference'ss according topic" class="table table-bordered table-hover">
+          <caption class="text-center"></caption>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+           {{#each model as |conference|}}
+            <tr>
+              <td>{{conference.title}}</td>
+              <td>{{conference.description}}</td>
+              <td>{{conference.location}}</td>
+            </tr>
+            {{/each}}
+
+          </tbody>
+          <tfoot>
+           <p>By Linda and Chris</p>
+          </tfoot>
+        </table>
+      </div><!--end of .table-responsive-->
+    </div>
+  </div>
+      {{outlet}}
+</div>
+
+          </tbody>
+          <tfoot>
+           <p>By Linda and Chris</p>
+          </tfoot>
+        </table>
+      </div><!--end of .table-responsive-->
+    </div>
+  </div>
+      {{outlet}}
+</div>
