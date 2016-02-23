@@ -1,0 +1,11 @@
+{{yield}}
+
+<div class="form-group">
+<div class="col-sm-3">Title:</div>
+ <div class="col-sm-9">{{input value=conference.title class="form-control"}}</div>
+</div>
+<div class="form-group">
+<div class="col-sm-3">Location:</div>
+ <div class="col-sm-9">{{input value=conference.location class="form-control"}}</div>
+</div>
+<button class="btn btn-success"{{action 'save' conference}}>Save</button>
