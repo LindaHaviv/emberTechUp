@@ -1,11 +1,37 @@
-<h1>Welcome to tech up</h1>
+<div class="container">
 
-<h3>ALL CONFERENCES</h3>
+  <div class="row">
+    <div class="col-xs-12">
+    <h2 class="center">Conferences</h2>
+        {{#link-to 'conferences.new' class="btn btn-default"}}Add Conference{{/link-to}}
+      <div class="table-responsive">
+        <table summary="This table displays conference'ss according topic" class="table table-bordered table-hover">
+          <caption class="text-center"></caption>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+           {{#each model as |conference|}}
+            <tr>
+              <td>{{conference.title}}</td>
+              <td>{{conference.description}}</td>
+              <td>{{conference.location}}</td>
+            </tr>
+            {{/each}}
+            
+          </tbody>
+          <tfoot>
+           <p>By Linda and Chris</p> 
+          </tfoot>
+        </table>
+      </div><!--end of .table-responsive-->
+    </div>
+  </div>
+      {{outlet}}
+</div>
 
-<ul>
-  {{#each model as |conference|}}
-  <li>{{conference.title}}</li>
-  {{/each}}
-</ul>
 
-{{outlet}}
