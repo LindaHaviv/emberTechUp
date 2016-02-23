@@ -2,4 +2,5 @@
 <h2>{{model.title}}</h2>
 <div>{{model.location}}</div>
 
-{{outlet}}
+{{#link-to 'conferences.edit' model class="btn btn-default"}}Edit Conference{{/link-to}}
+
