@@ -5,3 +5,8 @@ export default Ember.Route.extend({
     return this.store.findRecord('topic', params.id);
   }
 });
+
+
+
+
+
