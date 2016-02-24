@@ -8,4 +8,18 @@
 <div class="col-sm-3">Location:</div>
  <div class="col-sm-9">{{input value=conference.location class="form-control"}}</div>
 </div>
+<div class="form-group">
+<div class="col-sm-3">Topic:</div>
+ <div class="col-sm-9">{{!-- {{input value=conference.topic_id class="form-control"}} --}}
+ {{view "select" content=topics value=conference.topicId selection=selectedTopic
+ prompt="Select your topic"}}
+{{!--  {{view 'select' 
+ conference=model 
+ value=conference.topic_id
+ optionValuePath='conference.id'
+ optionLabelPath='conference.name'
+ selection=selectedModel
+ prompt="Select your topic"}} --}}
+ </div>
+</div>
 <button class="btn btn-success"{{action 'save' conference}}>Save</button>

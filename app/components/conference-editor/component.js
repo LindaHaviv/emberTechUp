@@ -1,5 +1,7 @@
 import Ember from 'ember';
 const ConferenceEditorComponent = Ember.Component.extend({
+   selectedTopic: null,
+  topics: ["Ember.js", "React.js", "Angular.js", "Ruby on Rails", "SQL", "Python", "Elixir"],
   actions: {
     save: function(model){
       // var router = this;
